@@ -9,10 +9,7 @@ class CategoryItem extends StatelessWidget{
   final Color color;
   CategoryItem(this.id, this.title, this.color);
   void selectCategory(BuildContext ctx){
-    Navigator.of(ctx).push(MaterialPageRoute(builder: (_){
-      return CategoryMeal(id, title);
-    },
-    ),
+    Navigator.of(ctx).pushNamed( CategoryMeal.routeName, arguments: {'id':id, 'title':title}
     );
   }
   @override
@@ -37,9 +34,5 @@ class CategoryItem extends StatelessWidget{
       ),
     );
   }
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(StringProperty('id', id));
+
   }
-}

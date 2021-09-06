@@ -8,7 +8,7 @@ class CategoriesScreen extends StatelessWidget{
       appBar: AppBar(title: Text("Meal"),),
         body: GridView(
           padding: EdgeInsets.all(25),
-          children:Dummy_CATEGORIES.map((catData) => CategoryItem(
+          children:DUMMY_CATEGORIES.map((catData) => CategoryItem(
            catData.id,
           catData.title,
           catData.color,),).toList(),
